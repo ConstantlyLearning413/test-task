@@ -3,6 +3,7 @@ import argparse
 
 
 def run(n: int, m: int):
+    # "длина" ведь не может быть отрицательной, верно?
     if m == 0:
         print()
         return
@@ -19,7 +20,7 @@ def run(n: int, m: int):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='task1')
     parser.add_argument('n', type=int, help='n - array length')
-    parser.add_argument('m', type=int, help='m - span')
+    parser.add_argument('m', type=int, help='m - span length')
     args = parser.parse_args()
 
     run(args.n, args.m)

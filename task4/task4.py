@@ -6,7 +6,7 @@ def count_steps(nums: list) -> int:
     if len(nums) < 2:
         return 0
 
-    nums.sort()
+    nums.sort()  # сортирует в среднем за O(n log n), используется алгоритм Timsort
     median_index = (len(nums) - 1) // 2
     median = nums[median_index]
 
