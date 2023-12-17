@@ -41,6 +41,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='task3')
     parser.add_argument('tests', type=str, help='tests.json file')
     parser.add_argument('values', type=str, help='values.json file')
+    parser.add_argument('--report', '-r', type=str, default=default_report_file, help='file to save a report json')
     args = parser.parse_args()
 
-    run(file_tests=args.tests, file_values=args.values)
+    run(file_tests=args.tests, file_values=args.values, file_report=args.report)
